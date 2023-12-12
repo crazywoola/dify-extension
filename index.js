@@ -33,7 +33,7 @@ app.post('/api/dify/receive', (req, res, next) => {
     }
 });
 
-function handleAppExternalDataToolQuery(params, res, next) {
+function handleAppExternalDataToolQuery(params, res) {
     const { app_id, tool_variable, inputs, query } = params;
 
     console.log(`app_id: ${app_id}`);
@@ -42,16 +42,20 @@ function handleAppExternalDataToolQuery(params, res, next) {
     console.log(`query: ${query}`);
 
     // TODO: Your external data tool query implementation here
-    if (inputs.location === 'London') {
+    if (inputs.choice === 'foods') {
         return res.json({
-            result: 'City: London\nTemperature: 10°C\nRealFeel®: 8°C\nAir Quality: Poor\nWind Direction: ENE\nWind Speed: 8 km/h\nWind Gusts: 14 km/h\nPrecipitation: Light rain'
+            result: 'apple,banana,orange,grape,watermelon,kiwi,peach,pear,pineapple,lemon,mango,blueberry,raspberry,blackberry,grapefruit,apricot,avocado,coconut,fig,guava,lychee,olive,papaya,passion fruit,pomegranate,star fruit,dragon fruit,plum',
+        });
+    } else if (inputs.choice === 'drinks') {
+        return res.json({
+            result: 'coffee,tea,juice,water,milk,beer,wine,whiskey,rum,vodka,gin,brandy,tequila,coke,pepsi,sprite,7up,fanta,red bull,monster',
         });
     } else {
-        return res.json({ result: 'Unknown city' });
+        return res.json({ result: 'Unknown inputs' });
     }
 }
 
-app.use((err, req, res, next) => {
+app.use((err, _, res, __) => {
     res.status(err.status || 500);
     res.json({ error: err.message });
 });

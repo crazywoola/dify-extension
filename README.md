@@ -32,11 +32,11 @@ curl --location 'http://localhost:3000/api/dify/receive' \
     "point": "app.external_data_tool.query",
     "params": {
         "app_id": "61248ab4-1125-45be-ae32-0ce91334d021",
-        "tool_variable": "weather_retrieve",
+        "tool_variable": "menu",
         "inputs": {
-            "location": "London"
+            "choice": "foods"
         },
-        "query": "How's the weather today?"
+        "query": "Give me something to eat?"
     }
 }
 ```
@@ -49,11 +49,11 @@ curl --location 'http://localhost:3000/api/dify/receive' \
     "point": "app.external_data_tool.query",
     "params": {
         "app_id": "61248ab4-1125-45be-ae32-0ce91334d021",
-        "tool_variable": "weather_retrieve",
+        "tool_variable": "menu",
         "inputs": {
-            "location": "London"
+            "choice": "foods"
         },
-        "query": "How'\''s the weather today?"
+        "query": "Give me something to eat?"
     }
 }'
 ```
