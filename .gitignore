@@ -1,0 +1,55 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file
+.env
+
+# Build output
+dist/
+build/
+out/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Next.js build output
+.next/
+
+# Nuxt.js build output
+.nuxt/
+
+# Vuepress build output
+.vuepress/dist/
+
+# Serverless directories
+.serverless/
+
+# Parcel build output
+.cache/
+.parcel-cache/
+
+# Yarn integrity file
+.yarn-integrity
+
+# TypeScript build output
+*.tsbuildinfo
+
+# Optional editor directories
+.idea/
+.vscode/
