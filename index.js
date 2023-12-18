@@ -5,9 +5,9 @@ const createError = require('http-errors');
 const app = express();
 app.use(bodyParser.json());
 
-const expectedApiKey = '123456'; // TODO: Your API key of this API
+const expectedApiKey = 'bananaiscool'; // TODO: Your API key of this API
 
-app.post('/api/dify/receive', (req, res, next) => {
+app.post('/endpoint', (req, res, next) => {
     const authorization = req.headers.authorization;
 
     if (!authorization) {
